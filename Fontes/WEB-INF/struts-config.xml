@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <global-forwards>
+    <forward name="erro" path="/erro.jsp"/>
+    <forward name="erroXML" path="/erroXML.jsp"/>
+  </global-forwards>
+  <action-mappings>
+    <action path="/geraListaBDPS"
+            type="extratocdeletAction.GeraListaBDPSAction">
+      <forward name="success" path="/tabelaBPDS.jsp"/>
+    </action>
+    <action path="/geraListaExtratoCDElet"
+            type="extratocdeletAction.GeraListaExtratoCDEletAction">
+      <forward name="success" path="/listaExtrato.jsp"/>
+    </action>
+    <action path="/geraExtratoSemFiltro"
+            type="extratocdeletAction.GeraExtratoSemFiltroAction">
+      <forward name="success" path="/showExtratoCD.jsp"/>
+    </action>
+    <action path="/loginIntranet"
+            type="extratocdeletAction.LoginIntranetAction">
+      <forward name="success" path="/indexIntranet.jsp"/>
+    </action>
+    <action path="/extratoXML" type="extratocdeletAction.ExtratoXMLAction">
+      <forward name="success" path="/teste.jsp"/>
+    </action>
+  </action-mappings>
+  <message-resources parameter="extratocdelet.ApplicationResources"/>
+</struts-config>
